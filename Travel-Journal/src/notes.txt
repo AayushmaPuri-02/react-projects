@@ -1,0 +1,100 @@
+export default [
+    {
+        setup: "I got my daughter a fridge for her birthday.",
+        punchline: "I can't wait to see her face light up when she opens it."
+    },
+    {
+        setup: "How did the hacker escape the police?",
+        punchline: "He just ransomware!"
+    },
+    {
+        setup: "Why don't pirates travel on mountain roads?",
+        punchline: "Scurvy."
+    },
+    {
+        setup: "Why do bees stay in the hive in the winter?",
+        punchline: "Swarm."
+    },
+    {
+        setup: "What's the best thing about Switzerland?",
+        punchline: "I don't know, but the flag is a big plus!"
+    }
+]
+--------------------------------------------------------------------------------
+import Joke from "./Joke"
+import jokesData from "./jokesData"
+
+export default function App() {
+    
+    const jokeElements = jokesData.map((joke) => {
+        return <Joke setup ={joke.setup}  punchline = {joke.punchline}/>
+    })
+    return (
+        <main>
+            {jokeElements}
+        </main>
+    )
+}
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+data.js
+
+Mount Fuji object
+      │
+      ▼
+App.jsx
+      │
+      │ data.map(...)
+      ▼
+list
+      │
+      │
+      ├── list.img
+      ├── list.title
+      ├── list.country
+      ├── list.googleMapsLink
+      ├── list.dates
+      └── list.text
+      │
+      ▼
+<Entry
+    img={list.img}
+    title={list.title}
+    country={list.country}
+    maps={list.googleMapsLink}
+    dates={list.dates}
+    text={list.text}
+/>
+      │
+      │ React packages those values into props
+      ▼
+
+Entry.jsx
+
+props = {
+    img: {...},
+    title: "Mount Fuji",
+    country: "Japan",
+    maps: "...",
+    dates: "...",
+    text: "..."
+}
+
+      │
+      ▼
+
+props.title
+props.country
+props.img.src
+props.dates
+props.text
+
+      │
+      ▼
+
+JSX
+
+      │
+      ▼
+
+Mount Fuji card on screen
