@@ -7,12 +7,7 @@ function App() {
   const entryElements = data.map((list)=>{
     return <Entry
                             key = {list.id}
-                            img = {list.img}   //the img here is the prop name and on the right is specifying the value. so prop obj will be {title = "mountain"}
-                            title = {list.title}
-                            country = {list.country}
-                            maps = {list.googleMapsLink}
-                            dates = {list.dates}
-                            text = {list.text}
+                            list = {list}
                             />
   })
   return (
